@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Movie Generator</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body style="background-color: #20202d">
+    <div class="main-container">
+      <div class="nav">
+        <h1>Random Movie Generator</h1>
+      </div>
+      <h2>Can't decide on what movie to watch?</h2>
+      <h4 class="mb-4">Randomize a movie with your select preferences</h4>
+      <button id="random-btn">Random</button>
+      <div class="categories-checkbox">
+        <button class="btn-checkbox">Action</button>
+        <button class="btn-checkbox">Adventure</button>
+        <button class="btn-checkbox">Animation</button>
+        <button class="btn-checkbox">Comedy</button>
+        <button class="btn-checkbox">Crime</button>
+        <button class="btn-checkbox">Documentary</button>
+        <button class="btn-checkbox">Drama</button>
+        <button class="btn-checkbox btn-hidden hidden">Family</button>
+        <button class="btn-checkbox btn-hidden hidden">Horror</button>
+        <button class="btn-checkbox btn-hidden hidden">Music</button>
+        <button class="btn-checkbox btn-hidden hidden">Mystery</button>
+        <button class="btn-checkbox btn-hidden hidden">Romance</button>
+        <button class="btn-checkbox btn-hidden hidden">Sci-Fi</button>
+        <button class="btn-checkbox btn-hidden hidden">Thriller</button>
+        <button class="btn-checkbox btn-hidden hidden">War</button>
+        <button class="" id="more-btn">
+          <i id="more-btn-sign" class="bx bx-plus-medical"></i>
+        </button>
+      </div>
+      <div class="movie-container">
+        <div class="left-side">
+          <img
+            src="https://image.tmdb.org/t/p/w185/46sp1Z9b2PPTgCMyA87g9aTLUXi.jpg"
+            alt=""
+          />
+        </div>
+        <div class="right-side">
+          <!-- Title -->
+          <h2>ABCDEF</h2>
+          <!-- Categories -->
+          <span class="category">Horror</span>
+          <span class="category">Horror</span>
+          <span class="category">Horror</span>
+          <span class="category">Horror</span>
+          <!-- Overview -->
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            tempora, esse corporis assumenda quis tempore sit eaque voluptates
+            deserunt officia nemo voluptas maxime ipsam animi nostrum? Cum et
+            ipsam repellendus.
+          </p>
+          <!-- Release Date -->
+          <p>Release Date</p>
+          <!-- Providers -->
+          <span>Netflix</span>
+          <span>Hulu</span>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script/script.js"></script>
+  </body>
+</html>
