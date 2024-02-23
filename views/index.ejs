@@ -15,14 +15,16 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="icon" href="/assets/movieIcon.png" type="image/png">
   </head>
   <body style="background-color: #20202d">
     <div class="main-container">
       <div class="nav">
-        <h1>Random Movie Generator</h1>
+        <a href="/" style="text-decoration: none;"><h1>Random Movie Generator</h1></a>
       </div>
-      <h2>Can't decide on what movie to watch?</h2>
-      <h4 class="mb-4">Randomize a movie with your select preferences</h4>
+      <h2 style="text-align: center;">Can't decide on what movie to watch?</h2>
+      <h4 class="">Randomize a movie with your select preferences</h4>
+      <h6 class="mb-4">Select up to 3 genres</h6>
       <!-- <form action="/random" method="post">
         <button id="random-btn" type="submit">Random</button>
         <div><input type="checkbox" name="action" id="28" >
@@ -132,11 +134,11 @@
 
       <div class="movie-container">
         <div class="left-side">
-          <img src="<%= data.posterImg %>" alt="" />
+          <img src="<%= data.posterImg %>" alt="Poster Image" id="poster-image"/>
         </div>
         <div class="right-side">
           <!-- Title -->
-          <h2><%= data.title %></h2>
+          <h2 id="movie-title"><%= data.title %></h2>
           <!-- Categories -->
           <div class="movie-category-container ml-0 my-4">
             <% for( let i = 0; i < data.genresList.length; i++ ) { %>

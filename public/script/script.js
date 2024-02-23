@@ -8,7 +8,14 @@ function toggleButtonHidden(button) {
 
 let checkedCount = 0;
 
+
 const checkboxes = document.getElementsByClassName("btn-checkbox");
+for (let i = 0; i < checkboxes.length; i++) {
+  if (checkboxes[i].classList.contains("active")){
+    checkedCount++;
+  }
+}
+
 for (let i = 0; i < checkboxes.length; i++) {
   checkboxes[i].addEventListener("click", function () {
     if (this.classList.contains("active")) {
