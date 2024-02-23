@@ -6,7 +6,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const APIkey = "03f3fa53ab9f0b658cf37093aba68e8c";
 const Access_Token =
