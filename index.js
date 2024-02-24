@@ -1,10 +1,14 @@
-import express from "express";
-import axios from "axios";
+// import express from "express";
+// import axios from "axios";
+const express = require("express");
+const axios = require("axios");
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+app.set('view engine', 'ejs')
+app.set('views', __dirname + '/views')
 
 const port = process.env.PORT || 3000;
 
@@ -22,7 +26,7 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index");
 });
 
 /**
@@ -136,7 +140,7 @@ app.post("/random", async (req, res) => {
     }
 
     global.movieData = randomMovie;
-    res.render("index.ejs", { data: global.movieData });
+    res.render("index", { data: global.movieData });
   } catch (error) {
     console.log("Error Server ", error);
   }
@@ -148,7 +152,7 @@ app.get("/random", async (req, res) => {
   const data = global.movieData;
 
   console.log(data);
-  res.render("index.ejs", { data: data, selectedCategories:global.selectedCategories });
+  res.render("index", { data: data, selectedCategories:global.selectedCategories });
 });
 
 function randomBound(max) {
