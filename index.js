@@ -100,11 +100,6 @@ app.post("/random", async (req, res) => {
         Authorization: `Bearer ${Access_Token}`,
       },
     });
-    // console.log("Movie Detail: " + response.data);
-    console.log(response.data);
-    // console.log("Response:");
-    // console.log(response);
-
     /**
      * API call to get trailer key
      */
@@ -141,15 +136,6 @@ app.post("/random", async (req, res) => {
     }
 
     global.movieData = randomMovie;
-    // global.movieData = {
-    //   overview: randomMovie.overview,
-    //   title: randomMovie.title,
-    //   releaseDate: randomMovie.release_date,
-    //   posterImg: randomMovie.poster_path,
-    //   genres: randomMovie.genre_ids,
-    // };
-    // await new Promise(resolve => setTimeout(resolve, 500));
-    // res.redirect("/random");
     res.render("index.ejs", { data: global.movieData });
   } catch (error) {
     console.log("Error Server ", error);
@@ -160,8 +146,7 @@ app.post("/random", async (req, res) => {
 app.get("/random", async (req, res) => {
   console.log("Get method");
   const data = global.movieData;
-  // data.posterImg = "https://image.tmdb.org/t/p/w185" + data.posterImg;
-  // console.log(data);
+
   console.log(data);
   res.render("index.ejs", { data: data, selectedCategories:global.selectedCategories });
 });
