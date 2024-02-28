@@ -131,7 +131,7 @@ app.post("/random", async (req, res) => {
       title: response.data.title,
       overview: response.data.overview,
       releaseDate: formatDate(response.data.release_date),
-      posterImg: `https://image.tmdb.org/t/p/w185${response.data.poster_path}`,
+      posterImg: `https://image.tmdb.org/t/p/w500${response.data.poster_path}`,
       runtime: `${response.data.runtime} minutes`,
       genresList: extractGenreNames(response.data.genres)
     };
